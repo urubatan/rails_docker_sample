@@ -1,24 +1,3 @@
-# README
+This code is the sample used to write this post in my blog:
+[http://sobrecodigo.com/how-to-use-docker-to-have-an-uniform-development-environment-for-your-rails-project/]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
