@@ -1,0 +1,32 @@
+version: '3'
+services:
+  mysqlhost:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - ../mysqldata:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    restart: always
+  redishost:
+    container_name: redis
+    image: redis
+    restart: always
+  web:
+    build: .
+    container_name: "myapp"
+    image: ubuntu/latest
+    environment:
+      - DATABASE_HOST=mysqlhost
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=password
+      - REDIS_URL=redis://redishost:6379/1
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysqlhost
+      - redishost
+
