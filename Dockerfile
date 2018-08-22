@@ -21,4 +21,4 @@ COPY Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install
 COPY . /myapp
 RUN yarn install
-ENTRYPOINT ["/myapp/bin/rails", "s", "-b", "0.0.0.0"]
+#ENTRYPOINT ["/myapp/bin/rails", "s", "-b", "0.0.0.0"]
